@@ -583,6 +583,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CyberParticle
       objectReference: {fileID: 0}
+    - target: {fileID: 4251746645309905973, guid: dfbaa0cad75196945a9a930f7c5d5924,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7392066466016118711, guid: dfbaa0cad75196945a9a930f7c5d5924,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10619,6 +10624,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: NatureParticle
       objectReference: {fileID: 0}
+    - target: {fileID: 8782064062880572706, guid: 8b53d5a9b3e15c1409526fc81a47516f,
+        type: 3}
+      propertyPath: UVModule.sprites.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 46120ac9e77ce3d4fa10f4714810bb0f,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15097,7 +15108,7 @@ Transform:
   m_GameObject: {fileID: 7696548426158909434}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.125, z: 2.93}
+  m_LocalPosition: {x: 0, y: 0.125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
