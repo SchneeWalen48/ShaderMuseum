@@ -97,3 +97,11 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# Do not share
+/[Aa]ssets/[Ii]thappy/
+/[Aa]ssets/[Ii]thappy.meta
+/[Aa]ssets/[Ss]cooter helmet/
+/[Aa]ssets/[Ss]cooter helmet.meta
+/[Aa]ssets/[Ss]ineVFX/
+/[Aa]ssets/[Ss]ineVFX.meta
