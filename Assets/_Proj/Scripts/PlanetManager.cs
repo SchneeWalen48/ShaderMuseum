@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlanetChanager : MonoBehaviour
+public class PlanetManager : MonoBehaviour
 {
   public GameObject[] planetPrefabs;
 
@@ -25,11 +25,13 @@ public class PlanetChanager : MonoBehaviour
   {
     idx = (idx + 1) % planetPrefabs.Length;
     ShowPlanet(idx);
+    print("Next");
   }
 
   public void PreviousPlanet()
   {
     idx = (idx - 1 + planetPrefabs.Length) % planetPrefabs.Length;
     ShowPlanet(idx);
+    print("Previous");
   }
 }
