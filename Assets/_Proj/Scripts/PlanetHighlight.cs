@@ -74,6 +74,5 @@ public class PlanetHighlight : MonoBehaviour
     }
 
     mat.SetFloat("_Progress", progress);
-    Debug.Log($"[PlanetHighlight] Progress: {progress}");
   }
 }
