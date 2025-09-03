@@ -22,7 +22,7 @@ public class PlanetHighlight : MonoBehaviour
     {
       // 공유 머티리얼 복사
       mat = highlightRenderer.material;
-      mat.SetFloat("_Progress", 0f);
+      mat.SetFloat("Progress", 0f);
     }
   }
 
@@ -72,6 +72,7 @@ public class PlanetHighlight : MonoBehaviour
       }
     }
 
-    mat.SetFloat("_Progress", progress);
+    mat.SetFloat("Progress", progress);
+    Debug.Log($"[PlanetHighlight] Progress: {progress}");
   }
 }
