@@ -21,8 +21,9 @@ public class PlanetHighlight : MonoBehaviour
     if (highlightRenderer != null)
     {
       // 공유 머티리얼 복사
+      mat = new Material(highlightRenderer.sharedMaterial);
       mat = highlightRenderer.material;
-      mat.SetFloat("Progress", 0f);
+      mat.SetFloat("_Progress", 0f);
     }
   }
 
@@ -72,7 +73,7 @@ public class PlanetHighlight : MonoBehaviour
       }
     }
 
-    mat.SetFloat("Progress", progress);
+    mat.SetFloat("_Progress", progress);
     Debug.Log($"[PlanetHighlight] Progress: {progress}");
   }
 }
