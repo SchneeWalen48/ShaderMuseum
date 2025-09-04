@@ -3890,7 +3890,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Grab the slide
+  m_Text: Grab the slider and move it
 --- !u!222 &1247873233
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5312,7 +5312,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Climb Interactable Objects
+  m_Text: Admire the Helmet Object
 --- !u!222 &1743632702
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13771,7 +13771,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Poke the buttons
+  m_Text: Click the buttons
 --- !u!1 &3807310295959509741
 GameObject:
   m_ObjectHideFlags: 0
