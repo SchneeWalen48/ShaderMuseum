@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
+
+#region Overlay Fx Spec Class
+[Serializable]
 public class OverlayFxSpec
 {
   public string name;
@@ -15,7 +17,7 @@ public class OverlayFxSpec
   public Vector3 localEuler;
   public Vector3 localScale = Vector3.one;
 
-  [Header("Particle Tweaks (x배)")]
+  [Header("Particle Tweaks (배수)")]
   [Min(0f)] public float simulationSpeed = 1f;
   [Min(0f)] public float startSpeedMul = 1f;
   [Min(0f)] public float startLifetimeMul = 1f;
@@ -31,6 +33,7 @@ public class OverlayFxSpec
   public float pingDistance = 0f;
   public float pingSpeed = 0f;
 }
+#endregion
 public class NatureBtn : MonoBehaviour
 {
   public enum ConcetpType { Rain, Jungle, Beach }
@@ -63,6 +66,28 @@ public class NatureBtn : MonoBehaviour
   // 내부 인스턴스 추적
   readonly System.Collections.Generic.List<GameObject> _extraInstances = new();
 
+  #region Spawn Splash params
+
+  [SerializeField] GameObject splashPrefab;
+  [SerializeField] Vector3 splashAreaSize = new Vector3(20f, 0, 20f);
+  [SerializeField] float spawnIntervalMin = 0.01f;
+  [SerializeField] float spawnIntervalMax = 0.1f;
+  private Coroutine splashCoroutine;
+  private readonly List<GameObject> _spawnedSplashes = new();
+
+  #endregion
+
+  #region Wave params
+
+  [SerializeField] GameObject wavePrefab;
+  [SerializeField] GameObject waveRipplePrefab;
+  [SerializeField] Vector3 waveSpawnPos = new Vector3(0, 0, -10f);
+  [SerializeField] float waveInterval = 1.5f;
+
+  private Coroutine waveCoroutine;
+
+  #endregion
+
   public void OnPressed()
   {
     // 다른 버튼 효과 즉시 정리
@@ -83,11 +108,24 @@ public class NatureBtn : MonoBehaviour
     SpawnAndForcePlayEffect();
     PlayAudioOneShotLooped();
 
+    if(type == ConcetpType.Beach && wavePrefab != null)
+    {
+      if (waveCoroutine != null) StopCoroutine(waveCoroutine);
+      waveCoroutine = StartCoroutine(WaveRoutine(playDuration));
+    }
+    if (type == ConcetpType.Rain && splashPrefab != null)
+    {
+      if (splashCoroutine != null) StopCoroutine(splashCoroutine);
+      splashCoroutine = StartCoroutine(SpawnSplashRoutine(playDuration));
+    }
+
     yield return new WaitForSeconds(playDuration);
 
     yield return StartCoroutine(FadeOutAudio(fadeOutSeconds));
     ResetToNature();
   }
+
+  #region Particle Spawn System
   void SpawnAndForcePlayEffect()
   {
     if (!effectParent)
@@ -219,6 +257,56 @@ public class NatureBtn : MonoBehaviour
     }
   }
 
+  void CleanupOverlays()
+  {
+    // 단일 인스턴스
+    if (effectInstance) Destroy(effectInstance);
+    effectInstance = null;
+
+    // 추가
+    for (int i = _extraInstances.Count - 1; i >= 0; --i)
+      if (_extraInstances[i]) Destroy(_extraInstances[i]);
+    _extraInstances.Clear();
+
+    // Splashes
+    for (int i = _spawnedSplashes.Count - 1; i >= 0; --i)
+      if (_spawnedSplashes[i]) Destroy(_spawnedSplashes[i]);
+    _spawnedSplashes.Clear();
+  }
+
+  void ResetToNature()
+  {
+    if (type == ConcetpType.Rain)
+    {
+      if (splashCoroutine != null)
+      {
+        StopCoroutine(splashCoroutine);
+        splashCoroutine = null;
+      }
+      for (int i = _spawnedSplashes.Count - 1; i >= 0; --i)
+        if (_spawnedSplashes[i]) Destroy(_spawnedSplashes[i]);
+      _spawnedSplashes.Clear();
+    }
+
+    // 스카이박스 원복
+    if (defaultNatureSkybox)
+    {
+      RenderSettings.skybox = defaultNatureSkybox;
+      DynamicGI.UpdateEnvironment();
+    }
+
+    if (skyboxManager)
+      skyboxManager.ResumeNatureAfterBtn();
+    else if (EnvironmentManager.I)
+      EnvironmentManager.I.ResumeNatureAfterBtn();
+
+    CleanupOverlays();
+
+    if (activeBtn == this) activeBtn = null;
+  }
+  #endregion
+
+  #region Audio
   void PlayAudioOneShotLooped()
   {
     if (source && clip)
@@ -246,6 +334,7 @@ public class NatureBtn : MonoBehaviour
     source.volume = volume;
     source.loop = false;
   }
+  #endregion
 
   public void StopCurrEffect()
   {
@@ -263,34 +352,54 @@ public class NatureBtn : MonoBehaviour
 
     ResetToNature();
   }
-  void CleanupOverlays()
-  {
-    // 단일 인스턴스
-    if (effectInstance) Destroy(effectInstance);
-    effectInstance = null;
 
-    // 추가
-    for (int i = _extraInstances.Count - 1; i >= 0; --i)
-      if (_extraInstances[i]) Destroy(_extraInstances[i]);
-    _extraInstances.Clear();
-  }
-
-  void ResetToNature()
+  #region Splash
+  IEnumerator SpawnSplashRoutine(float duration)
   {
-    // 스카이박스 원복
-    if (defaultNatureSkybox)
+    float timer = 0f;
+    while (timer < duration)
     {
-      RenderSettings.skybox = defaultNatureSkybox;
-      DynamicGI.UpdateEnvironment();
+      Vector3 randPos = new Vector3(
+        UnityEngine.Random.Range(-splashAreaSize.x * 0.5f, splashAreaSize.x * 0.5f),
+            0f,
+            UnityEngine.Random.Range(-splashAreaSize.z * 0.5f, splashAreaSize.z * 0.5f)
+        );
+
+      var splash = Instantiate(splashPrefab, effectParent);
+      splash.transform.localPosition = randPos;
+      _spawnedSplashes.Add(splash);
+
+      float wait = UnityEngine.Random.Range(spawnIntervalMin, spawnIntervalMax);
+      yield return new WaitForSeconds(wait);
+
+      timer += wait;
     }
-
-    if (skyboxManager)
-      skyboxManager.ResumeNatureAfterBtn();
-    else if (EnvironmentManager.I)
-      EnvironmentManager.I.ResumeNatureAfterBtn();
-
-    CleanupOverlays();
-
-    if (activeBtn == this) activeBtn = null;
   }
+  #endregion
+
+  #region Wave
+  IEnumerator WaveRoutine(float duration)
+  {
+    float t = 0f;
+    while (t < duration)
+    {
+      // 큰 파도 생성
+      var wave = Instantiate(wavePrefab, effectParent);
+      wave.transform.localPosition = new Vector3(0, 0, -15f);
+
+      // 일정 시간 후 Ripple 생성
+      yield return new WaitForSeconds(3f);
+      for (int i = 0; i < 3; i++)
+      {
+        Vector3 offset = new Vector3(UnityEngine.Random.Range(-5f, 5f), 0, UnityEngine.Random.Range(-2f, 2f));
+        var ripple = Instantiate(waveRipplePrefab, effectParent);
+        ripple.transform.localPosition = offset;
+      }
+
+      // 다음 파도까지 대기
+      yield return new WaitForSeconds(5f);
+      t += 8f;
+    }
+  }
+  #endregion
 }
