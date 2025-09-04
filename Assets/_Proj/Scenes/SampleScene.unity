@@ -5191,7 +5191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b0789bb16512484897ef7f33ccf4cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMat: {fileID: 2100000, guid: fe4e130f9947345a2b213cb5038851a2, type: 2}
+  mainMat: {fileID: 2100000, guid: 7b0f2096b49ccfb4f8b47c8084d650fa, type: 2}
   spaceMat: {fileID: 2100000, guid: 273108d56c3e119478902277d4743e18, type: 2}
   natureMat: {fileID: 2100000, guid: 5b253672e1aa12b4089ccd59ce38e142, type: 2}
   cyberMat: {fileID: 2100000, guid: 1dcde43afcfe4ab468ae55f56831ec35, type: 2}
