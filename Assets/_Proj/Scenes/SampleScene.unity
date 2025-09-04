@@ -130,6 +130,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1014857019}
     m_Modifications:
+    - target: {fileID: 30606928445732200, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 104762580725054858, guid: 6be6da8605519bf44967fc66f6a81966,
         type: 3}
       propertyPath: m_Size.x
@@ -165,10 +170,45 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1182948787775577591, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285764928070638947, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1888200075025853934, guid: 6be6da8605519bf44967fc66f6a81966,
         type: 3}
       propertyPath: m_Name
       value: JungleButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888200075025853934, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974067879632099571, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162127825658436297, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Colliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162127825658436297, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Colliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 1257949497}
+    - target: {fileID: 4162127825658436297, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 4162127825658436297, guid: 6be6da8605519bf44967fc66f6a81966,
         type: 3}
@@ -204,6 +244,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503349109756904591, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_PokeConfiguration.m_UseConstant
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503349109756904591, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_PokeConfiguration.m_ConstantValue.m_InteractionDepthOffset
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503349109756904591, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_PokeConfiguration.m_ConstantValue.m_EnablePokeAngleThreshold
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4717071655911824123, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5355365334772582584, guid: 6be6da8605519bf44967fc66f6a81966,
         type: 3}
@@ -261,6 +321,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: e45f8f823c093d941855bb23b53b9414,
         type: 3}
+    - target: {fileID: 6390947289998334620, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836451541913240860, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9008796394121643117, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_MaxDistance
+      value: 0.01
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2971,6 +3046,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1014857019}
     m_Modifications:
+    - target: {fileID: 30606928445732200, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 104762580725054858, guid: 6be6da8605519bf44967fc66f6a81966,
         type: 3}
       propertyPath: m_Size.x
@@ -3006,10 +3086,45 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1182948787775577591, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285764928070638947, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1888200075025853934, guid: 6be6da8605519bf44967fc66f6a81966,
         type: 3}
       propertyPath: m_Name
       value: RainButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888200075025853934, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974067879632099571, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162127825658436297, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Colliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162127825658436297, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Colliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 1445438899}
+    - target: {fileID: 4162127825658436297, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 4162127825658436297, guid: 6be6da8605519bf44967fc66f6a81966,
         type: 3}
@@ -3045,6 +3160,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503349109756904591, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_PokeConfiguration.m_ConstantValue.m_InteractionDepthOffset
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503349109756904591, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_PokeConfiguration.m_ConstantValue.m_EnablePokeAngleThreshold
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4717071655911824123, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5355365334772582584, guid: 6be6da8605519bf44967fc66f6a81966,
         type: 3}
@@ -3102,6 +3232,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: e45f8f823c093d941855bb23b53b9414,
         type: 3}
+    - target: {fileID: 6390947289998334620, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836451541913240860, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3759,6 +3899,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247873230}
   m_CullTransparentMesh: 0
+--- !u!65 &1257949497 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 104762580725054858, guid: 6be6da8605519bf44967fc66f6a81966,
+    type: 3}
+  m_PrefabInstance: {fileID: 4705340}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1263550674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4429,6 +4575,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1348466022}
   m_CullTransparentMesh: 0
+--- !u!65 &1400558611 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 104762580725054858, guid: 6be6da8605519bf44967fc66f6a81966,
+    type: 3}
+  m_PrefabInstance: {fileID: 8601219643875092336}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1423680378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4505,6 +4657,12 @@ PrefabInstance:
 --- !u!4 &1445438894 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5355365334772582584, guid: 6be6da8605519bf44967fc66f6a81966,
+    type: 3}
+  m_PrefabInstance: {fileID: 1011175418}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1445438899 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 104762580725054858, guid: 6be6da8605519bf44967fc66f6a81966,
     type: 3}
   m_PrefabInstance: {fileID: 1011175418}
   m_PrefabAsset: {fileID: 0}
@@ -12088,7 +12246,7 @@ GameObject:
   - component: {fileID: 5936371351629262867}
   - component: {fileID: 4386197395831460018}
   - component: {fileID: 1761869941698528248}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13511,7 +13669,7 @@ GameObject:
   - component: {fileID: 8330918384147862538}
   - component: {fileID: 2099103081270244523}
   - component: {fileID: 4146705900313012193}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14901,7 +15059,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 128
   m_AttachTransform: {fileID: 1318600020032091814}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -15430,7 +15588,8 @@ GameObject:
   - component: {fileID: 3725602586617221823}
   - component: {fileID: 509604627088906895}
   - component: {fileID: 6599448040038298548}
-  m_Layer: 0
+  - component: {fileID: 6599448040038298549}
+  m_Layer: 8
   m_Name: Poke Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15983,7 +16142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7640130199799992002}
   - component: {fileID: 4710497675207233396}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Poke Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16064,6 +16223,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &6599448040038298549
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5628056356765402376}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &6674425748948089833
 Transform:
   m_ObjectHideFlags: 0
@@ -17126,7 +17306,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 128
   m_AttachTransform: {fileID: 3725602586617221823}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -17644,7 +17824,8 @@ GameObject:
   - component: {fileID: 1318600020032091814}
   - component: {fileID: 2804932081934335638}
   - component: {fileID: 8821029317575972781}
-  m_Layer: 0
+  - component: {fileID: 8821029317575972782}
+  m_Layer: 8
   m_Name: Poke Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18027,6 +18208,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1014857019}
     m_Modifications:
+    - target: {fileID: 30606928445732200, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 454681840041687969, guid: 6be6da8605519bf44967fc66f6a81966,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -18042,10 +18228,45 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1182948787775577591, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1285764928070638947, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1888200075025853934, guid: 6be6da8605519bf44967fc66f6a81966,
         type: 3}
       propertyPath: m_Name
       value: BeachButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888200075025853934, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974067879632099571, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162127825658436297, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Colliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162127825658436297, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Colliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 1400558611}
+    - target: {fileID: 4162127825658436297, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 4162127825658436297, guid: 6be6da8605519bf44967fc66f6a81966,
         type: 3}
@@ -18081,6 +18302,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503349109756904591, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_PokeConfiguration.m_ConstantValue.m_InteractionDepthOffset
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503349109756904591, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_PokeConfiguration.m_ConstantValue.m_EnablePokeAngleThreshold
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4717071655911824123, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5355365334772582584, guid: 6be6da8605519bf44967fc66f6a81966,
         type: 3}
@@ -18138,6 +18374,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: e45f8f823c093d941855bb23b53b9414,
         type: 3}
+    - target: {fileID: 6390947289998334620, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836451541913240860, guid: 6be6da8605519bf44967fc66f6a81966,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18221,7 +18467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5474219472814172891}
   - component: {fileID: 6962680227710020461}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Poke Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18304,6 +18550,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &8821029317575972782
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8063056433851982097}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &8892169125382184543
 MeshFilter:
   m_ObjectHideFlags: 0
