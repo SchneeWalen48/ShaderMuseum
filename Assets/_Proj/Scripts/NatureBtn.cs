@@ -288,6 +288,8 @@ public class NatureBtn : MonoBehaviour
       _spawnedSplashes.Clear();
     }
 
+    CleanupOverlays();
+
     // 스카이박스 원복
     if (defaultNatureSkybox)
     {
