@@ -4,6 +4,7 @@ using UnityEngine;
 
 public enum EnvironmentMode
 {
+  None = -1,
   Default,
   Space,
   Nature,
@@ -81,7 +82,7 @@ public class EnvironmentManager : MonoBehaviour
   [Min(0f)] public float crossfadeSeconds = 0.8f;
 
   private Coroutine cycleRoutine;
-  private EnvironmentMode currMode;
+  private EnvironmentMode currMode = EnvironmentMode.None;
   private LightingCycle lightCycle;
 
   // BGM 교차 페이드용
@@ -128,6 +129,7 @@ public class EnvironmentManager : MonoBehaviour
     RenderSettings.skybox = mainMat;
     DynamicGI.UpdateEnvironment();
     ChangeEnvironment(EnvironmentMode.Default);
+    CrossfadeBgm(defaultBGM, crossfadeSeconds, bgmVolume);
   }
 
   public void ChangeEnvironment(EnvironmentMode mode)
@@ -138,6 +140,7 @@ public class EnvironmentManager : MonoBehaviour
     RenderSettings.skybox = GetMat(mode);
     DynamicGI.UpdateEnvironment();
 
+    EnsureExtrasSpawned(mode);
     ActivateParticlesExclusive(GetFxRoot(mode));
 
     if (mode == EnvironmentMode.Nature)
@@ -152,13 +155,11 @@ public class EnvironmentManager : MonoBehaviour
     }
     else
     {
-      ActivateParticlesExclusive(GetFxRoot(mode));
-
       //Day Cycle
       switch (mode)
       {
         case EnvironmentMode.Cyber:
-          StopDayCycle();
+          StartDayCycle();
           break;
         case EnvironmentMode.Future:
           StartDayCycle();

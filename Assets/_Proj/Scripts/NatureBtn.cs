@@ -171,7 +171,7 @@ public class NatureBtn : MonoBehaviour
         parent = effectParent;
       }
 
-      var inst = Instantiate(s.prefab, parent);
+      var inst = Instantiate(s.prefab, parent, false);
       _extraInstances.Add(inst);
 
       inst.transform.localPosition = s.localPosition;
